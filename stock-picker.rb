@@ -8,8 +8,8 @@ def stock_picker(stock_array)
       current_value = stock_array[selling_day_index].to_i - buying_day_value.to_i
       if current_value > best_value
         best_value = current_value
-        best_yield[0] = buying_day_index
-        best_yield[1] = selling_day_index
+        best_yield[0] = buying_day_index + 1
+        best_yield[1] = selling_day_index + 1
       end
     end
   end
